@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Briefing</title>
+    <!-- Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- The ASIDE navigation is identical to your dashboard page -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <span class="material-symbols-sharp danger icon">help_clinic</span>
+                    <h2>Clinic<span class="danger">OS</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>  
+
+            <div class="sidebar">
+                <a href="index.html">
+                    <span class="material-symbols-sharp">grid_view</span>
+                    <h3>Dashboard</h3>
+                </a>                
+                <a href="#" class="active">
+                    <span class="material-symbols-sharp">group</span>
+                    <h3>Patients</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">outbox</span>
+                    <h3>Referrals</h3>
+                </a>
+                <a href="#">
+                    <span class="material-symbols-sharp">analytics</span>
+                    <h3>Clinic Analytics</h3>
+                </a>                
+                <a href="#">
+                    <span class="material-symbols-sharp">mail</span>
+                    <h3>Messages</h3>
+                    <span class="message-count">11</span>
+                </a>                
+                <a href="#">
+                    <span class="material-symbols-sharp">report</span>
+                    <h3>Reports</h3>
+                </a>                
+                <a href="#">
+                    <span class="material-symbols-sharp">settings</span>
+                    <h3>Settings</h3>
+                </a>      
+                <a href="#">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        
+        <!-- ================================================================= -->
+        <!-- ================ START OF NEW BRIEFING CONTENT ================== -->
+        <!-- ================================================================= -->
+
+        <main>
+            <!-- 1. HEADER SECTION -->
+            <h1>Patient Briefing</h1>
+            <div class="date">
+                <p id="date-value"></p> <!-- Your JS can populate this -->
+            </div>
+
+            <div class="briefing-header">
+                <div class="patient-title">
+                    <span class="material-symbols-sharp">person</span>
+                    <h2>Tran, Nguyen Thi</h2>
+                </div>
+                <div class="patient-demographics text-muted">
+                    <span>ID: 123</span> | 
+                    <span>DOB: 15/06/1956 (68 yrs)</span> | 
+                    <span>Sex: Female</span> | 
+                    <span>Language: Vietnamese (Translated)</span>
+                </div>
+            </div>
+
+            <!-- 2. MAIN CONTENT - TWO-COLUMN LAYOUT -->
+            <div class="briefing-container">
+
+                <!-- LEFT COLUMN: PATIENT'S REPORT -->
+                <div class="subjective-report">
+                    <h2>Subjective Report</h2>
+                    <div class="info-block">
+                        <h3>Primary Complaint</h3>
+                        <p>Headache & Dizziness</p>
+                    </div>
+                    <div class="info-block">
+                        <h3>Symptom Details</h3>
+                        <ul class="symptom-list">
+                            <li><strong>Onset:</strong> Approx. 3 days ago</li>
+                            <li><strong>Timing:</strong> Reports pain is worse in the mornings</li>
+                            <li><strong>Pain Type:</strong> <span class="icon">🌀</span> Throbbing</li>
+                            <li><strong>Location:</strong> Forehead and Temples (Bilateral)</li>
+                        </ul>
+                    </div>
+                    <div class="info-block quote-box">
+                        <h3>Patient's Own Words (Translated from Kiosk)</h3>
+                        <blockquote>
+                            "I have been feeling very dizzy when I stand up too quickly from a chair. The room feels like it is spinning for a moment. I also feel a little sick to my stomach, but I have not vomited."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: AI ANALYSIS -->
+                <div class="clinical-analysis">
+                    <h2>Clinical Analysis</h2>
+                    <div class="info-block">
+                        <h3>Recommended Actions</h3>
+                        <ul class="checklist">
+                            <li><span class="material-symbols-sharp">check_box_outline_blank</span> Check Blood Pressure Immediately</li>
+                            <li><span class="material-symbols-sharp">check_box_outline_blank</span> Ask about recent falls or changes in vision</li>
+                            <li><span class="material-symbols-sharp">check_box_outline_blank</span> Perform Dix-Hallpike test to rule out BPV</li>
+                            <li><span class="material-symbols-sharp">check_box_outline_blank</span> Review medication history for potential side effects</li>
+                        </ul>
+                    </div>
+                    <div class="info-block">
+                        <h3>Relevant Medical History (from EMR)</h3>
+                        <p><strong>Last BP Check (6 mos ago):</strong> <span class="danger">145/95 mmHg (Elevated)</span></p>
+                        <p><strong>Medications:</strong> None Listed</p>
+                        <p><strong>Allergies:</strong> None Known</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. FOOTER / ACTION BAR -->
+            <div class="briefing-footer">
+                <a href="index.html" class="button-secondary">Back to Dashboard</a>
+                <a href="#" class="button-primary">Start Consultation & Add Notes</a>
+            </div>
+        </main>
+
+        <!-- ================================================================= -->
+        <!-- ================== END OF NEW BRIEFING CONTENT ================== -->
+        <!-- ================================================================= -->
+
+        <!-- The RIGHT sidebar can remain the same to show consistency -->
+         <div class="right">
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </div>
+                <div class="profile">
+                    <div class="info">
+                        <p>Hey, <b>Dr. Sharma</b></p>
+                        <p>(GP)</p>
+                    </div>
+                    <div class="profile-photo">
+                        <img src="/images/blank.webp">
+                    </div>
+                </div>
+            </div>
+            <!-- END OF TOP -->
+            
+
+        <div class="ai-triage-panel">
+            <h2>AI Triage Summary</h2>
+
+            <!-- CATEGORY CARD -->
+            <div class="item triage-card">
+                <div class="icon warning">
+                    <span class="material-symbols-sharp">neurology</span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>CATEGORY</h3>
+                    </div>
+                    <h5>Neurological / Circulatory</h5>
+                </div>
+            </div>
+
+            <!-- POTENTIAL ISSUES CARD -->
+            <div class="item triage-card">
+                <div class="icon danger">
+                    <span class="material-symbols-sharp">dangerous</span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>POTENTIAL ISSUES</h3>
+                    </div>
+                    <h5>Hypertension, Vertigo</h5>
+                </div>
+            </div>
+
+            <!-- URGENCY CARD -->
+            <div class="item triage-card">
+                <div class="icon primary">
+                    <span class="material-symbols-sharp">priority_high</span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>URGENCY</h3>
+                    </div>
+                    <h5 class="warning-text">Standard</h5>
+                </div>
+            </div>
+
+            <!-- TOP RECOMMENDATION CARD -->
+            <div class="item triage-card">
+                <div class="icon success">
+                    <span class="material-symbols-sharp">recommend</span>
+                </div>
+                <div class="content">
+                    <div class="info">
+                        <h3>TOP RECOMMENDATION</h3>
+                    </div>
+                    <h5>Check Blood Pressure</h5>
+                </div>
+            </div>
+        </div>
+        <!-- ======================================================= -->
+        <!-- =============== END OF NEW AI TRIAGE PANEL ============== -->
+        <!-- ======================================================= -->
+    </div>
+    <script src="index.js"></script>
+</body> 
+</html>

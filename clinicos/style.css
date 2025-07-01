@@ -504,3 +504,178 @@ main .patient-queue a {
 .hidden {
     display: none;
 }
+
+/* Briefing Page Specific Layout */
+main .briefing-header {
+    margin-top: 1.4rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-light);
+}
+
+main .briefing-header .patient-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+main .briefing-header .patient-title h2 {
+    margin: 0;
+}
+
+main .briefing-header .patient-demographics {
+    margin-top: 0.5rem;
+    font-size: 0.87rem;
+}
+
+main .briefing-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+main .briefing-container h2 {
+    margin-bottom: 0.8rem;
+}
+
+main .briefing-container .info-block {
+    background: var(--color-white);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .briefing-container .info-block:hover {
+    box-shadow: none;
+}
+
+main .briefing-container .info-block h3 {
+    margin-bottom: 0.5rem;
+}
+
+main .briefing-container .info-block p,
+main .briefing-container .info-block li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Specific styling for elements */
+main .briefing-container .symptom-list,
+main .briefing-container .checklist {
+    list-style: none;
+    padding-left: 0;
+}
+
+main .briefing-container .checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+main .briefing-container .quote-box {
+    border-left: 4px solid var(--color-primary);
+}
+
+main .briefing-container blockquote {
+    margin: 0;
+    font-style: italic;
+    color: var(--color-dark-variant);
+}
+
+main .briefing-container .ai-summary {
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+}
+
+/* Footer buttons */
+main .briefing-footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+main .briefing-footer a.button-primary,
+main .briefing-footer a.button-secondary {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius-2);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+main .briefing-footer a.button-primary {
+    background: var(--color-primary);
+    color: white;
+}
+
+main .briefing-footer a.button-secondary {
+    background: var(--color-light);
+    color: var(--color-dark);
+}
+
+.right .ai-triage-panel {
+    margin-top: 2rem;
+}
+
+.right .ai-triage-panel h2 {
+    margin-bottom: 0.8rem;
+}
+
+/* This is the main card style */
+.right .ai-triage-panel .triage-card {
+    background: var(--color-white);
+    display: flex;
+    align-items: center; /* Vertically aligns the icon with the text block */
+    gap: 1.5rem; /* Increased gap for better spacing */
+    margin-bottom: 1rem;
+    padding: 1.4rem var(--card-padding);
+    border-radius: var(--border-radius-3); /* Use a consistent border radius */
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.right .ai-triage-panel .triage-card:hover {
+    box-shadow: none;
+}
+
+/* Icon styling */
+.right .ai-triage-panel .triage-card .icon {
+    padding: 0.8rem; /* Slightly larger padding */
+    border-radius: 50%;
+    color: var(--color-white);
+    display: flex;
+    font-size: 1.8rem; /* Larger icon */
+}
+
+/* Re-using your color scheme */
+.right .ai-triage-panel .icon.warning { background: #ffbb55; } /* Example color */
+.right .ai-triage-panel .icon.danger { background: #ff7782; } /* Example color */
+.right .ai-triage-panel .icon.primary { background: #7380ec; } /* Example color */
+.right .ai-triage-panel .icon.success { background: #41f1b6; } /* Example color */
+
+
+/* THIS IS THE FIX: The new .content wrapper */
+.right .ai-triage-panel .triage-card .content {
+    width: 100%;
+}
+
+.right .ai-triage-panel .triage-card .info h3 {
+    font-weight: 500;
+    font-size: 0.87rem;
+    color: var(--color-info-dark);
+}
+
+.right .ai-triage-panel .triage-card h5 {
+    font-size: 1.2rem; /* Larger, more prominent text */
+    font-weight: 700;
+    color: var(--color-dark);
+}
+
+/* Specific text color for "Standard" urgency */
+.right .ai-triage-panel .triage-card h5.warning-text {
+    color: #ffbb55; /* Match the icon color */
+}
