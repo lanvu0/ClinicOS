@@ -27,6 +27,16 @@
     --box-shadow: 0 2rem 3rem var(--color-light);
 }
 
+/* DARK THEME VARIABLES */
+.dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: #a3bdcc;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -135,7 +145,6 @@ aside {
 }
 
 aside .top {
-    background: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -144,7 +153,14 @@ aside .top {
 
 aside .logo {
     display: flex;
-    gap: 0.8rem;
+    align-items: center;
+    gap: 0.1rem;
+}
+
+aside .logo .icon {
+    padding-bottom: 7px;
+    font-size: 2.4rem;
+    margin: 0;
 }
 
 aside .logo img {
@@ -158,7 +174,7 @@ aside .close {
 
 /* Sidebar */
 aside .sidebar {
-    background: white;
+    background: var(--color-white);
     display: flex;
     flex-direction: column;
     height: 86vh;
@@ -380,9 +396,11 @@ main .patient-queue a {
 
 .right .top .profile {
     display: flex;
-    gap: 2px;
+    align-items: center;
+    gap: 30px;
     text-align: right;
 }
+
 
 /* RECENT UPDATES */
 .right .recent-updates {

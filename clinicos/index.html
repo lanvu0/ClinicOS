@@ -7,14 +7,14 @@
     <!-- Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
     <!-- Stylesheet -->
-     <link rel="Stylesheet" href="style.css">
+    <link rel="Stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <aside>
             <div class="top">
                 <div class="logo">
-                    <img src="/images/logo.png">
+                    <span class="material-symbols-sharp danger icon">help_clinic</span>
                     <h2>Clinic<span class="danger">OS</span></h2>
                 </div>
                 <div class="close" id="close-btn">
@@ -58,10 +58,10 @@
                 </a>
             </div>
         </aside>
-        <main>
+        <main id="dashboard-page" class="page">
             <h1>Dashboard</h1>
             <div class="date">
-                <input type="date">
+                <p id="date-value"></p>
             </div>
 
             <div class="insights">
@@ -90,7 +90,7 @@
                 </div>
                 <!-- END OF URGENT FLAGS -->
                 <div class="lab-results">
-                    <span class="material-symbols-sharp">group</span>
+                    <span class="material-symbols-sharp">experiment</span>
                     <div class="middle">
                         <div class="left">
                             <h3>Lab Results Pending</h3>
@@ -119,36 +119,38 @@
                     <tbody>
                         <tr>
                             <td>Tran, Nguyen Thi</td>
-                            <td>9:15 AM (12m ago)</td>
+                            <td>9:27 AM (0m ago)</td>
                             <td>Headache & Dizziness</td>
+                            <td class="warning">Standard</td>
+                            <td class="primary">
+                                <a href="#" class="view-briefing-link" data-patient-id="briefing-tran">View Briefing</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chen David</td>
+                            <td>9:05 AM (22m ago)</td>
+                            <td>흉통 (Chest Pain)</td>
+                            <td class="danger">Urgent</td>
+                            <td class="primary">View Briefing</td>
+                        </tr>
+                        <tr>
+                            <td>Al-Jamil, Omar</td>
+                            <td>9:20 AM (7m ago)</td>
+                            <td>Prescription Renewal (Asthma)</td>
+                            <td class="success">Low</td>
+                            <td class="primary">View Briefing</td>
+                        </tr>
+                        <tr>
+                            <td>White, Emily</td>
+                            <td>9:15 AM (12m ago)</td>
+                            <td>Anxiety & Trouble Sleeping</td>
                             <td class="warning">Standard</td>
                             <td class="primary">View Briefing</td>
                         </tr>
                         <tr>
-                            <td>Tran, Nguyen Thi</td>
-                            <td>9:15 AM (12m ago)</td>
-                            <td>Headache & Dizziness</td>
-                            <td class="warning">Standard</td>
-                            <td class="primary">View Briefing</td>
-                        </tr>
-                        <tr>
-                            <td>Tran, Nguyen Thi</td>
-                            <td>9:15 AM (12m ago)</td>
-                            <td>Headache & Dizziness</td>
-                            <td class="warning">Standard</td>
-                            <td class="primary">View Briefing</td>
-                        </tr>
-                        <tr>
-                            <td>Tran, Nguyen Thi</td>
-                            <td>9:15 AM (12m ago)</td>
-                            <td>Headache & Dizziness</td>
-                            <td class="warning">Standard</td>
-                            <td class="primary">View Briefing</td>
-                        </tr>
-                        <tr>
-                            <td>Tran, Nguyen Thi</td>
-                            <td>9:15 AM (12m ago)</td>
-                            <td>Headache & Dizziness</td>
+                            <td>Smith, Sophie (by mother)</td>
+                            <td>9:10 AM (17m ago)</td>
+                            <td>Fall from playground</td>
                             <td class="warning">Standard</td>
                             <td class="primary">View Briefing</td>
                         </tr>
@@ -170,9 +172,10 @@
                 <div class="profile">
                     <div class="info">
                         <p>Hey, <b>Dr. Sharma</b></p>
+                        <p>(GP)</p>
                     </div>
                     <div class="profile-photo">
-                        <img src="/images/profile">
+                        <img src="/images/blank.webp">
                     </div>
                 </div>
             </div>
@@ -205,7 +208,7 @@
                 <h2>Clinic Analytics</h2>
                 <div class="consultations item">
                     <div class="icon">
-                        <span class="material-symbols-sharp">local_hospital</span>
+                        <span class="material-symbols-sharp">calendar_today</span>
                     </div>
                     <div class="right">
                         <div class="info">
@@ -213,12 +216,12 @@
                             <small class="text-muted">Last 24 Hours</small>
                         </div>
                         <h5 class="success">+15%</h5>
-                        <h3>24</h3>
+                        <h3>18</h3>
                     </div>
                 </div>
                 <div class="prescriptions item">
                     <div class="icon">
-                        <span class="material-symbols-sharp">chat</span>
+                        <span class="material-symbols-sharp">pill</span>
                     </div>
                     <div class="right">
                         <div class="info">
@@ -226,12 +229,12 @@
                             <small class="text-muted">Last 24 Hours</small>
                         </div>
                         <h5 class="danger">-10%</h5>
-                        <h3>8</h3>
+                        <h3>11</h3>
                     </div>
                 </div>
                 <div class="new-patients item">
                     <div class="icon">
-                        <span class="material-symbols-sharp">healing</span>
+                        <span class="material-symbols-sharp">person</span>
                     </div>
                     <div class="right">
                         <div class="info">
@@ -239,7 +242,7 @@
                             <small class="text-muted">Last 24 Hours</small>
                         </div>
                         <h5 class="success">+25%</h5>
-                        <h3>4</h3>
+                        <h3>3</h3>
                     </div>
                 </div>
                 <div class="item add-data">
@@ -251,5 +254,14 @@
              </div>
         </div>
     </div>
-</body>
+
+    <section id="briefing-tran" class="page hidden">
+        <a href="#" class="back-to-dashboard-link">← Back to Dashboard</a>
+        <h1>GP Briefing for: Tran, Nguyen Thi</h1>
+        <p><strong>Complaint:</strong> Headache & Dizziness</p>
+        <p><strong>Priority:</strong> Standard</p>
+    </section>
+
+    <script src="index.js"></script>
+</body> 
 </html>
