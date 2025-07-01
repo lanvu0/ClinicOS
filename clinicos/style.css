@@ -499,3 +499,8 @@ main .patient-queue a {
 .right .clinic-analytics .item.add-data div h3 {
     font-weight: 500;
 }
+
+
+.hidden {
+    display: none;
+}

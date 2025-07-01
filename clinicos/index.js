@@ -5,7 +5,7 @@ themeToggler.addEventListener("click", () => {
     document.body.classList.toggle("dark-theme-variables");
 })
 
-// Set today's date
+// Get today's date
 var now = new Date();
 
 // Function to add ordinal suffix
@@ -22,8 +22,11 @@ function getOrdinalSuffix(day) {
     }
 }
 
+// Format today's date into readable string
 var options = { weekday: 'long', day: 'numeric', month: 'long' };
 var day = now.getDate();
 var formattedDate = `${now.toLocaleString('en-US', options).replace(day, day + getOrdinalSuffix(day))}`;
 
 document.getElementById("date-value").innerHTML = formattedDate;
+
+
