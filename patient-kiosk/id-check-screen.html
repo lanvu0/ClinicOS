@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Check - ClinicOS Kiosk</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="kiosk-style.css">
+</head>
+<body>
+    <div class="kiosk-container">
+        <div class="kiosk-header">
+             <span class="material-symbols-sharp icon">help_clinic</span>
+            <h1>Clinic<span class="danger">OS</span></h1>
+        </div>
+        <h2>Identity Verification</h2>
+        <p>Please scan your Medicare card on the reader below.</p>
+        
+        <span class="material-symbols-sharp status-icon" style="color: var(--color-primary);">qr_code_scanner</span>
+
+        <h3>Scanning...</h3>
+    </div>
+
+    <script>
+        // Simulate a scan and automatically redirect after a delay
+        setTimeout(() => {
+            window.location.href = 'symptom-screen.html'; // Change to your next screen
+        }, 3000); // 3-second delay
+    </script>
+</body>
+</html>
