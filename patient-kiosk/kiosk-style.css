@@ -51,13 +51,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 0.1rem;
     margin-bottom: 1.5rem;
 }
 
 .kiosk-header .icon {
     font-size: 3rem;
     color: var(--color-danger);
+    padding-bottom: 7px;
 }
 
 .kiosk-header h1 {
