@@ -325,6 +325,8 @@ main .patient-queue table {
     text-align: center;
     box-shadow: var(--box-shadow);
     transition: all 300ms ease;
+    border-collapse: separate;
+    border-spacing: 1rem 0;
 }
 
 main .patient-queue table:hover {
@@ -348,6 +350,17 @@ main .patient-queue a {
     color: var(--color-primary);
 }
 
+main .patient-queue a.button-view {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--border-radius-1);
+    transition: all 300ms ease;
+    max-width: 120px;
+}
+main .patient-queue a.button-view:hover {
+    opacity: 0.8;
+}
 
 /* RIGHT */
 .right {
