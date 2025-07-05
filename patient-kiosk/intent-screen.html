@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reason for Visit - ClinicOS Kiosk</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="kiosk-style.css">
+</head>
+<body>
+    <div class="kiosk-container">
+        <div class="kiosk-header">
+             <span class="material-symbols-sharp icon">help_clinic</span>
+            <h1>Clinic<span class="danger">OS</span></h1>
+        </div>
+        <h2>What is the main reason for your visit today?</h2>
+        <p>Please select one of the options below.</p>
+        
+        <div class="symptom-grid" style="grid-template-columns: 1fr 1fr;">
+            <!-- Option 1: The "Dine-in" path -->
+            <a href="symptom-screen.html" class="symptom-btn">
+                <span class="material-symbols-sharp" style="color: var(--color-danger);">sick</span>
+                <h3>I have a New Problem or Symptom</h3>
+            </a>
+
+            <!-- Option 2: The "Takeaway" path -->
+            <a href="repeat-script-screen.html" class="symptom-btn">
+                <span class="material-symbols-sharp" style="color: var(--color-success);">pill</span>
+                <h3>I'm here for a Repeat Prescription or Follow-up</h3>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Details - ClinicOS Kiosk</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="kiosk-style.css">
+    <!-- Link to the new chat-specific CSS -->
+    <link rel="stylesheet" href="chat-style.css"> 
+</head>
+<body>
+    <div class="kiosk-container">
+        <div class="kiosk-header">
+            <span class="material-symbols-sharp danger icon">help_clinic</span>
+            <h1>Clinic<span class="danger">OS</span></h1>
+        </div>
+        <h2>Let's get some more details</h2>
+        <p>Please answer a few quick questions to help the doctor understand your situation.</p>
+        
+        <!-- The Chat Interface -->
+        <div class="chat-window">
+            <div id="message-list" class="message-list">
+                <!-- Messages will be added here by JavaScript -->
+            </div>
+            <div class="chat-input-area">
+                <input type="text" id="chat-input" placeholder="Type your answer here..." disabled>
+                <button id="send-btn" class="send-btn" disabled>
+                    <span class="material-symbols-sharp">send</span>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- The JavaScript to power the conversation -->
+    <script src="chat-logic.js"></script>
+</body>
+</html>

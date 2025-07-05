@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat Prescription - ClinicOS Kiosk</title>
+    <link rel="stylesheet" href="kiosk-style.css">
+</head>
+<body>
+    <div class="kiosk-container">
+        <div class="kiosk-header">
+             <h1>Clinic<span class="danger">OS</span></h1>
+        </div>
+        <h2>Repeat Prescription Request</h2>
+        <p>Please confirm which medication you need renewed.</p>
+        
+        <!-- In a real app, this would be populated from the patient's file -->
+        <div class="symptom-grid" style="grid-template-columns: 1fr;">
+             <a href="confirmation-screen.html" class="symptom-btn">
+                <h3>Ventolin (Salbutamol) Inhaler</h3>
+             </a>
+             <a href="confirmation-screen.html" class="symptom-btn">
+                <h3>Coversyl (Perindopril) 5mg</h3>
+             </a>
+        </div>
+
+        <p style="margin-top: 2rem; font-size: 0.9rem;">If your medication is not listed, please go back and select "New Problem".</p>
+    </div>
+</body>
+</html>
