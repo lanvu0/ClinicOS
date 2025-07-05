@@ -1,8 +1,5 @@
-/* kiosk-style.css */
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
 
-/* Re-using your brand colors */
 :root {
     --color-primary: #7380ec;
     --color-danger: #ff7782;
@@ -24,7 +21,7 @@
 }
 
 html {
-    font-size: 18px; /* Slightly larger for better readability on kiosks */
+    font-size: 18px;
 }
 
 body {
@@ -111,8 +108,8 @@ body {
 }
 
 .language-btn .flag-icon {
-    font-size: 4rem; /* Makes the flag emoji much larger */
-    line-height: 1; /* Ensures proper spacing */
+    font-size: 4rem;
+    line-height: 1;
 }
 
 
